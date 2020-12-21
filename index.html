@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmo con condicionales</title>
+    <script>
+
+        //prompts para el nombre y la edad
+        nombre = prompt("ingrese su nombre");
+        edad = prompt("¿Cuál es tu edad " + nombre + "?");
+        
+        //condicional para mostrar mensaje y para poder ingresar a la encuesta
+        if (edad < 18){
+            alert("No puedes ingresar, eres menor de edad.");
+        } else {
+            alert("Bienvenido!");
+
+            //adivina la película
+            pelicula = "Los vengadores";
+            añoEstreno = 2012;
+            puntos = 0;
+
+            //pregunta por el nombre de la peli
+            if (prompt("En qué película de una conocida franquicia se reúnen 6 heroes para luchar juntos contra los villanos?") == pelicula){
+                alert("Correcto");
+                puntos = puntos + 1;
+            } else {
+                alert("Incorrecto :(");
+            }
+
+            //pregunta por el año de la peli
+            if (prompt("En qué año se estrenó esta película?") == añoEstreno){
+                alert("Correcto");
+                puntos = puntos + 1;
+            } else {
+                alert("Incorrecto :(");
+            }
+
+            //Mensajes finales
+            alert("Tu puntaje final es: " + puntos + " puntos");
+            alert("Gracias por participar " + nombre);
+        }
+        
+        console.log(puntos);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
