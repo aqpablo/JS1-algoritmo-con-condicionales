@@ -11,7 +11,10 @@
         edad = prompt("¿Cuál es tu edad " + nombre + "?");
         
         //condicional para mostrar mensaje y para poder ingresar a la encuesta
-        if (edad < 18){
+        if (nombre == null){
+            alert("No puedes ingresar sin un nombre");
+        }
+        else if (edad < 18){
             alert("No puedes ingresar, eres menor de edad.");
         } else {
             alert("Bienvenido!");
@@ -21,9 +24,10 @@
             pelicula = "Los vengadores";
             añoEstreno = 2012;
             puntos = 0;
-
+            
             //pregunta por el nombre de la peli
-            if (prompt("En qué película de una conocida franquicia se reúnen 6 heroes para luchar juntos contra los villanos?") == pelicula){
+            respuestaPelicula = prompt("En qué película de una conocida franquicia se reúnen 6 heroes para luchar juntos contra los villanos?");
+            if (respuestaPelicula && respuestaPelicula.toUpperCase() == pelicula.toUpperCase()){
                 alert("Correcto");
                 puntos = puntos + 1;
             } else {
@@ -31,7 +35,8 @@
             }
 
             //pregunta por el año de la peli
-            if (prompt("En qué año se estrenó esta película?") == añoEstreno){
+            respuestaAño = prompt("En qué año se estrenó Los Vengadores?");
+            if (respuestaAño == añoEstreno){
                 alert("Correcto");
                 puntos = puntos + 1;
             } else {
