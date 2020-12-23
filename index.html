@@ -8,46 +8,46 @@
 
         //prompts para ingresar el nombre y la edad
         nombre = prompt("ingrese su nombre");
-        edad = prompt("¿Cuál es tu edad " + nombre + "?");
-        
-        //condicional para mostrar mensaje y para poder ingresar a la encuesta
         if (nombre == null){
             alert("No puedes ingresar sin un nombre");
-        }
-        else if (edad < 18){
-            alert("No puedes ingresar, eres menor de edad.");
-        } else {
-            alert("Bienvenido!");
-
-            //adivina la película
+        }else{
+            edad = prompt("¿Cuál es tu edad " + nombre + "?");
             
-            pelicula = "Los vengadores";
-            añoEstreno = 2012;
-            puntos = 0;
-            
-            //pregunta por el nombre de la peli
-            respuestaPelicula = prompt("En qué película de una conocida franquicia se reúnen 6 heroes para luchar juntos contra los villanos?");
-            if (respuestaPelicula && respuestaPelicula.toUpperCase() == pelicula.toUpperCase()){
-                alert("Correcto");
-                puntos = puntos + 1;
+            //condicional para mostrar mensaje y para poder ingresar a la encuesta
+                if (edad < 18){
+                alert("No puedes ingresar, eres menor de edad.");
             } else {
-                alert("Incorrecto :(");
-            }
+                alert("Bienvenido!");
 
-            //pregunta por el año de la peli
-            respuestaAño = prompt("En qué año se estrenó Los Vengadores?");
-            if (respuestaAño == añoEstreno){
-                alert("Correcto");
-                puntos = puntos + 1;
-            } else {
-                alert("Incorrecto :(");
-            }
+                //adivina la película
+                
+                pelicula = "Los vengadores";
+                añoEstreno = 2012;
+                puntos = 0;
+                
+                //pregunta por el nombre de la peli
+                respuestaPelicula = prompt("En qué película de una conocida franquicia se reúnen 6 heroes para luchar juntos contra los villanos?");
+                if (respuestaPelicula && respuestaPelicula.toUpperCase() == pelicula.toUpperCase()){
+                    alert("Correcto");
+                    puntos = puntos + 1;
+                } else {
+                    alert("Incorrecto :(");
+                }
 
-            //Mensajes finales
-            alert("Tu puntaje final es: " + puntos + " puntos");
-            alert("Gracias por participar " + nombre);
+                //pregunta por el año de la peli
+                respuestaAño = prompt("En qué año se estrenó Los Vengadores?");
+                if (respuestaAño == añoEstreno){
+                    alert("Correcto");
+                    puntos = puntos + 1;
+                } else {
+                    alert("Incorrecto :(");
+                }
+
+                //Mensajes finales
+                alert("Tu puntaje final es: " + puntos + " puntos");
+                alert("Gracias por participar " + nombre);
+            }
         }
-        
         console.log(puntos);
     </script>
 </head>
